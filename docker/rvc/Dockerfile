@@ -34,5 +34,5 @@ RUN conda create -n rvc-webui python=3.8 && conda init && . /root/.bashrc && con
 RUN conda init && . /root/.bashrc && conda activate rvc-webui && pip install "pip<24" && pip install -r requirements.txt && pip install gradio==3.48.0
 RUN conda init && . /root/.bashrc && conda activate rvc-webui && pip install demucs
 
-#RUN aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/hubert_base.pt -d assets/hubert -o hubert_base.pt
-#RUN aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/rmvpe.pt -d assets/rmvpe -o rmvpe.pt
+RUN aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/hubert_base.pt -d assets/hubert -o hubert_base.pt
+RUN aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lj1995/VoiceConversionWebUI/resolve/main/rmvpe.pt -d assets/rmvpe -o rmvpe.pt
